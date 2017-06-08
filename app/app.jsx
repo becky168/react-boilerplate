@@ -2,6 +2,9 @@ var React = require("react");
 var ReactDOM = require("react-dom");
 var {Route, Router, IndexRoute, hashHistory} = require("react-router");
 
+import ComponentOne from "./components/ComponentOne";
+import ComponentTwo from "./components/ComponentTwo";
+
 // require the css that the component need only inside the component
 // Load fundation
 // css!: css loader
@@ -50,6 +53,9 @@ path 是對應 URL 的規則。
 PS. IndexRoute does not have path
 */
 ReactDOM.render(
-    <p>Boilerplate 3 Project</p>,
+    <div>
+        <ComponentOne count={123} />
+        <ComponentTwo count={88} />
+    </div>,
     document.getElementById("app")
 );
